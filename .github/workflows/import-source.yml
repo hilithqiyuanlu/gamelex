@@ -1,0 +1,40 @@
+name: Import audited GameLex source
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    if: github.repository == 'hilithqiyuanlu/gamelex'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Import the checked source archive once
+        shell: bash
+        run: |
+          set -euo pipefail
+          test ! -f core/include/gamelex/core.hpp
+          echo "95f37528a1098bbabfc13882f2453ed8f083452a2752f0b4e8d6dfa158d993da  gamelex-0.3.0-source.zip" | sha256sum --check
+          python3 - <<'PYCODE'
+          from pathlib import Path, PurePosixPath
+          import zipfile
+          with zipfile.ZipFile('gamelex-0.3.0-source.zip') as archive:
+              for entry in archive.infolist():
+                  path = PurePosixPath(entry.filename)
+                  if path.is_absolute() or '..' in path.parts or path.parts[0] != 'gamelex':
+                      raise ValueError('Invalid source path')
+                  relative = Path(*path.parts[1:])
+                  if relative.parts[:2] == ('.github', 'workflows'):
+                      continue
+                  if entry.is_dir():
+                      relative.mkdir(parents=True, exist_ok=True)
+                  else:
+                      relative.parent.mkdir(parents=True, exist_ok=True)
+                      relative.write_bytes(archive.read(entry))
+          PYCODE
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm gamelex-0.3.0-source.zip
+          git add .
+          git commit -m 'Publish GameLex 0.3.0 source and trial tooling'
+          git push origin HEAD:main
