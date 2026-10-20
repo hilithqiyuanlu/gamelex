@@ -1,0 +1,27 @@
+name: Build GameLex and run checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  portable:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y cmake libcurl4-openssl-dev libjpeg-dev
+      - run: cmake -S . -B build/host && cmake --build build/host --parallel 4 && ctest --test-dir build/host --output-on-failure
+  switch:
+    runs-on: ubuntu-latest
+    container:
+      image: devkitpro/devkita64@sha256:1fc388c3a0d34bd2045a6dadcb1020e069d5f876a187fd705de14b4440c00282
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/fetch_deps.py --sources
+      - run: python3 scripts/build_switch.py
+      - run: python3 scripts/package.py && python3 scripts/package_source.py && python3 scripts/package_trial.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gamelex-trial-hardware-validation-pending
+          path: dist/*.zip
