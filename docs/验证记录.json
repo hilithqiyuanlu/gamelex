@@ -1,0 +1,27 @@
+{
+  "recorded_at": "2026-10-19T16:19:43+08:00",
+  "scope": "phase1-probe",
+  "host_core_checks": 112,
+  "localhost_https_scenarios": 10,
+  "deployment_test_cases": 7,
+  "actual_package_smoke": "passed using a temporary directory, not a real SD card",
+  "switch_compilation": "passed with isolated devkitA64 GCC 16.1.0",
+  "binary_structure": "NRO0 / NSO0 / PFS0 / NPDM program ID and service permission checks passed",
+  "hardware_validation": "pending",
+  "real_provider_test": "not run; no user API key configured",
+  "sd_card_access": "not performed",
+  "binaries": {
+    "switch/sysmodule/gamelex-sys.nsp": {
+      "bytes": 1001020,
+      "sha256": "284bf7381e151fe639b7be7736b6336cf612db2160ca3d100654fd0931b229a1"
+    },
+    "switch/overlay/gamelex-probe.ovl": {
+      "bytes": 1069112,
+      "sha256": "c9606820ada40c0dfbbbe618ea6f3a239d7a3c44c8da015adcf1e018314a178a"
+    },
+    "switch/diagnostics/gamelex-device-probe.nro": {
+      "bytes": 864312,
+      "sha256": "5a4bbbc364a6cc81abd1fd132301a06ac4a44548951bc5148db60bb8d6eefedf"
+    }
+  }
+}

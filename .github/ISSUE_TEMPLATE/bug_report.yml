@@ -1,0 +1,33 @@
+name: 问题反馈
+description: 报告识别、分组、操作或安装问题
+title: "[问题] "
+body:
+  - type: markdown
+    attributes:
+      value: 请勿附上密钥、config.json、整个数据目录或 SD 卡。尚未确认的版本请填“不知道”。
+  - type: input
+    id: version
+    attributes:
+      label: GameLex 版本
+      placeholder: 例如 0.3.0
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 运行环境
+      description: NS1 机型；固件、大气层、UH 和加载器版本；掌机或电视模式；其他常驻模块。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤与实际结果
+      description: 游戏和页面类型、做了什么、预期是什么、实际是什么、错误码、出现频率。
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 可选补充
+      description: 仅添加自己确认可以分享的画面或说明。不要上传密钥或配置文件。

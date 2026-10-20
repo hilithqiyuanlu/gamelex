@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "endpoint": "https://api.example.com/v1/chat/completions",
+  "api_key": "",
+  "model": "",
+  "ocr_api_key": "",
+  "ocr_secret": "",
+  "translate_appid": "",
+  "translate_key": "",
+  "timeout_seconds": 20,
+  "ca_bundle": "sdmc:/config/gamelex/cacert.pem",
+  "probe_crop": {
+    "x": 0.0,
+    "y": 0.65,
+    "width": 1.0,
+    "height": 0.3
+  },
+  "capture_combo": [
+    "L",
+    "DOWN",
+    "LSTICK"
+  ],
+  "input_combo": [
+    "L",
+    "UP",
+    "LSTICK"
+  ],
+  "save_last_capture": false
+}

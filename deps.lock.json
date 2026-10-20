@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "host_cmake": "3.31.6",
+  "docker_image": "devkitpro/devkita64@sha256:1fc388c3a0d34bd2045a6dadcb1020e069d5f876a187fd705de14b4440c00282",
+  "archives": [
+    {
+      "name": "devkita64-binutils-2.46.0-1-osx_arm64.pkg.tar.zst",
+      "kind": "mac-sdk",
+      "url": "https://wii.leseratte10.de/devkitPro/devkitA64/r30%20(2026-06-10)/devkita64-binutils-2.46.0-1-osx_arm64.pkg.tar.zst",
+      "referer": "https://wii.leseratte10.de/devkitPro/devkitA64/r30%20(2026-06-10)/",
+      "sha256": "95c529a31ecbb0ac75c3d932d3af236692828204abfb96b30e6b0fb7e6ca6bd5"
+    },
+    {
+      "name": "devkita64-gcc-16.1.0-1-osx_arm64.pkg.tar.zst",
+      "kind": "mac-sdk",
+      "url": "https://wii.leseratte10.de/devkitPro/devkitA64/r30%20(2026-06-10)/devkita64-gcc-16.1.0-1-osx_arm64.pkg.tar.zst",
+      "referer": "https://wii.leseratte10.de/devkitPro/devkitA64/r30%20(2026-06-10)/",
+      "sha256": "bcb9f606affecd6ed5e48abbcccba6be1a9f1de1ef8a86556739a32c877a1c84"
+    },
+    {
+      "name": "devkita64-newlib-4.6.0.20260123-4-any.pkg.tar.zst",
+      "kind": "mac-sdk",
+      "url": "https://wii.leseratte10.de/devkitPro/devkitA64/r29%20(2026-01)/devkita64-newlib-4.6.0.20260123-4-any.pkg.tar.zst",
+      "referer": "https://wii.leseratte10.de/devkitPro/devkitA64/r29%20(2026-01)/",
+      "sha256": "fc97ba1009a94b68f8714c3cc548ef697ca82687b72fe0c05a7ca3df81beb53e"
+    },
+    {
+      "name": "devkita64-rules-1.1.1-1-any.pkg.tar.zst",
+      "kind": "mac-sdk",
+      "url": "https://wii.leseratte10.de/devkitPro/devkitA64/devkita64-rules/devkita64-rules-1.1.1-1-any.pkg.tar.zst",
+      "referer": "https://wii.leseratte10.de/devkitPro/devkitA64/devkita64-rules/",
+      "sha256": "2649cf7827243447070073acc2aa2fee152a0592fc30e827ceed803c565a1ede"
+    },
+    {
+      "name": "libnx-4.12.0-1-any.pkg.tar.zst",
+      "kind": "mac-sdk",
+      "url": "https://wii.leseratte10.de/devkitPro/libnx/libnx-4.12.0-1-any.pkg.tar.zst",
+      "referer": "https://wii.leseratte10.de/devkitPro/libnx/",
+      "sha256": "c6950bdf8e4b872ece492225368c03e633776329548a7494f91aa1e8f239cd8a"
+    },
+    {
+      "name": "switch-curl-7.69.1-5-any.pkg.tar.zst",
+      "kind": "mac-sdk",
+      "url": "https://wii.leseratte10.de/devkitPro/switch/switch-curl-7.69.1-5-any.pkg.tar.zst",
+      "referer": "https://wii.leseratte10.de/devkitPro/switch/",
+      "sha256": "062f683cc9925e6c27e38a9dc9c97fabe17a9eae6002c355000f5cff5886c81e"
+    },
+    {
+      "name": "switch-libjpeg-turbo-2.1.2-2-any.pkg.tar.xz",
+      "kind": "mac-sdk",
+      "url": "https://wii.leseratte10.de/devkitPro/switch/switch-libjpeg-turbo-2.1.2-2-any.pkg.tar.xz",
+      "referer": "https://wii.leseratte10.de/devkitPro/switch/",
+      "sha256": "26d77a0743eb810f9b9e873f3cac7fbf31a716bfb0a7981a8c3bf3812f6cd1bf"
+    },
+    {
+      "name": "switch-mbedtls-2.28.10-1-any.pkg.tar.zst",
+      "kind": "mac-sdk",
+      "url": "https://wii.leseratte10.de/devkitPro/switch/switch-mbedtls-2.28.10-1-any.pkg.tar.zst",
+      "referer": "https://wii.leseratte10.de/devkitPro/switch/",
+      "sha256": "bf2b89236e280c5bfedab14826fc80566617a738034378c5917c40d7619143c9"
+    },
+    {
+      "name": "switch-tools-1.13.1-1-osx_arm64.pkg.tar.zst",
+      "kind": "mac-sdk",
+      "url": "https://wii.leseratte10.de/devkitPro/switch/switch-tools-1.13.1-1-osx_arm64.pkg.tar.zst",
+      "referer": "https://wii.leseratte10.de/devkitPro/switch/",
+      "sha256": "5f046c5dbf0ed080edead1ecf2275f71b691f30235eca2e4e03e679934f00c51"
+    },
+    {
+      "name": "switch-zlib-1.3.1-1-any.pkg.tar.zst",
+      "kind": "mac-sdk",
+      "url": "https://wii.leseratte10.de/devkitPro/switch/switch-zlib-1.3.1-1-any.pkg.tar.zst",
+      "referer": "https://wii.leseratte10.de/devkitPro/switch/",
+      "sha256": "53cb5dc4006c96cd4195dabc15b46f07a63ad99c91939ce921db33556396442c"
+    },
+    {
+      "name": "libultrahand",
+      "kind": "source",
+      "url": "https://codeload.github.com/ppkantorski/libultrahand/tar.gz/2e4df5430045217093dd77751cd9e16c92fe9144",
+      "sha256": "5d32e8b48d7f8a1f70013cc8b1df0b4936394b3c717a51287672331ccddf484d",
+      "destination": "vendor/libultrahand",
+      "strip_components": 1
+    },
+    {
+      "name": "libjpeg-turbo",
+      "kind": "source",
+      "url": "https://codeload.github.com/libjpeg-turbo/libjpeg-turbo/tar.gz/refs/tags/3.1.3",
+      "sha256": "3a13a5ba767dc8264bc40b185e41368a80d5d5f945944d1dbaa4b2fb0099f4e5",
+      "destination": "vendor/libjpeg-turbo",
+      "strip_components": 1
+    }
+  ]
+}
